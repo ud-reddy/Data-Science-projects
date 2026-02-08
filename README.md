@@ -1,105 +1,157 @@
+# 🏛️ Athena  
+### A Rebooted Digital Experience for University of Leeds Students
 
-# Athena & UniLeeds Project Hub
+Athena is a **modern reboot of the University of Leeds’ Minerva platform**, alongside a reimagined UniLeeds mobile app.  
+It enhances usability, security, and engagement while preserving all essential university services students rely on.
 
-[![System Status](https://img.shields.io/badge/System-Active-success?style=for-the-badge)](https://github.com/)
-[![Web App](https://img.shields.io/badge/Platform-Athena_Web-blue?style=for-the-badge)](https://athena.leeds.ac.uk)
-[![Mobile App](https://img.shields.io/badge/Platform-UniLeeds_Mobile-orange?style=for-the-badge)](https://mobile.leeds.ac.uk)
-
-A synchronized ecosystem for University of Leeds students, integrating comprehensive academic management with rapid mobile access.
-
----
-
-## 🏛️ Project Overview
-
-This repository contains the source code and architecture for the dual-interface student management system. **Athena** serves as the central hub for long-form academic tasks, while the **UniLeeds Mobile App** provides on-the-go utility for daily campus life.
-
-### 🌐 Athena Web Portal
-Athena is the desktop-first website that students use for "everything university." 
-- **Academic Records:** View grades, transcripts, and official documents.
-- **Module Management:** Enroll in modules and access learning materials (VLE integration).
-- **Finances:** Pay tuition fees and manage student accounts.
-- **Personal Information:** Update contact details and student status.
-
-### 📱 UniLeeds Mobile App
-The mobile companion designed for quick, high-frequency university activities.
-- **Attendance Scanner:** Built-in QR scanner to register for lectures instantly.
-- **Smart Timetable:** Real-time synchronized schedule with push notifications.
-- **Campus Maps:** Integrated navigation for lecture theaters and labs.
-- **Digital ID:** Mobile-first student identification for library access.
+> ⚠️ This project is a **conceptual and academic prototype** and is **not** an official University of Leeds product.
 
 ---
 
-## 🏗️ System Architecture
+## ✨ Key Highlights
 
-The most critical component of this ecosystem is the **Shared Central Database**, which ensures a seamless flow of data. When a student scans their attendance on the UniLeeds App, the record is immediately visible on the Athena portal for staff and students to verify.
-
-![Architecture Diagram Placeholder](https://picsum.photos/800/400?grayscale)
-
-> *Figure 1: High-level data flow showing the bi-directional connectivity between the Core Database, Athena Web, and UniLeeds Mobile.*
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend (Web):** React 18, TypeScript, Tailwind CSS
-- **Frontend (Mobile):** React Native, Expo
-- **Backend:** Node.js, Express, Prisma ORM
-- **Database:** PostgreSQL (Centralized instance)
-- **Infrastructure:** AWS (RDS, S3 for student documents)
+- 🔐 **Secure, location-verified attendance**
+- 📊 **Real-time attendance dashboard**
+- 🎮 **Gamified learning experience**
+- 🌙 **Modern UI with dark mode**
+- 🔄 **Bi-directional web & mobile sync**
 
 ---
 
-## 🖼️ User Interface Preview
+## 🧠 System Architecture
 
-| Athena (Web Portal) | UniLeeds (Mobile App) |
-| :---: | :---: |
-| ![Athena Placeholder](https://picsum.photos/400/250) | ![Mobile Placeholder](https://picsum.photos/200/350) |
+### High-Level Bi-Directional Data Flow
 
----
+The Athena ecosystem is built around a **central core database** that synchronizes data between the web platform and the mobile app in real time.
 
-## 🚀 Getting Started
+![High-Level Bi-Directional Data Flow Architecture](./assets/architecture.png)
 
-### Prerequisites
-- Node.js v18+
-- PostgreSQL instance
-- Expo CLI (for mobile development)
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/uni-leeds/athena-unileeds.git
-   cd athena-unileeds
-   ```
-
-2. Install dependencies for all workspace packages:
-   ```bash
-   npm install
-   ```
-
-3. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   # Update DATABASE_URL and API_KEYS
-   ```
-
-4. Run the development environment:
-   ```bash
-   # Start Web
-   npm run dev:web
-
-   # Start Mobile
-   npm run dev:mobile
-   ```
+**How it works:**
+- Athena Web and the UniLeeds Mobile App both communicate with the core database
+- Data such as course content, user profiles, and attendance updates are synced bi-directionally
+- Push notifications and offline sync requests are handled efficiently
+- The database acts as the single source of truth
 
 ---
 
-## 🔗 Useful Links
-- [University of Leeds Official](https://leeds.ac.uk)
-- [Athena Support Portal](https://athena.leeds.ac.uk/help)
-- [API Documentation](https://api.leeds.ac.uk/docs)
+## 🖥️ Athena Web Platform (Minerva Reboot)
+
+Athena replaces the traditional Minerva website with a modern, student-first design.
+
+### Features
+- Access to all university services
+- Lecture schedules and module information
+- Centralised academic resources
+- Attendance analytics dashboard
+- Clean, responsive interface
+- Dark mode support 🌙
+
+![Athena Web Dashboard](./assets/web-dashboard.png)
 
 ---
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
-  
+## 📱 UniLeeds Mobile App (Rebooted)
+
+The mobile application mirrors Athena’s functionality while enhancing mobility and accessibility.
+
+### Features
+- QR-based lecture attendance
+- Real-time sync with Athena Web
+- Notifications for lectures, deadlines, and updates
+- Offline data access and syncing
+- Improved UI and performance
+
+![UniLeeds Mobile App](./assets/mobile-app.png)
+
+---
+
+## 🔐 Enhanced Attendance System
+
+Athena improves the existing QR code attendance system by adding an **extra security layer**.
+
+### How Attendance Works
+1. QR code is scanned in the lecture hall
+2. The app captures the student’s real-time location
+3. Attendance is recorded **only if the student is physically present**
+4. Attendance data syncs instantly with the Athena dashboard
+
+This prevents:
+- Remote check-ins
+- QR code sharing
+- False attendance records
+
+![Secure Attendance Flow](./assets/attendance-flow.png)
+
+---
+
+## 📊 Attendance Dashboard
+
+Students can track their engagement through a dedicated dashboard:
+
+- Attendance per module
+- Weekly and overall attendance trends
+- Clear visual indicators
+- Improved academic accountability
+
+![Attendance Dashboard](./assets/attendance-dashboard.png)
+
+---
+
+## 🎮 Gamified Learning Experience
+
+Athena introduces a learning platform that feels more like a game than a static portal.
+
+- Progress tracking
+- Engagement-driven design
+- Motivation through visual feedback
+- Encourages consistent participation
+
+![Gamified Learning Interface](./assets/gamified-learning.png)
+
+---
+
+## 🎯 Project Goals
+
+- Improve attendance reliability
+- Increase student engagement
+- Modernize university digital tools
+- Preserve familiarity while enhancing usability
+- Reduce misuse of attendance systems
+
+---
+
+## 🛠️ Technologies Used
+
+> *(Adjust based on your actual implementation)*
+
+- **Frontend:** HTML, CSS, JavaScript / React
+- **Backend:** Node.js, REST APIs
+- **Mobile:** Cross-platform framework
+- **Database:** Centralised core database
+- **Location Services:** GPS-based verification
+- **Authentication:** University login integration
+
+---
+
+## 🚀 Future Enhancements
+
+- Lecturer analytics dashboard
+- Push notifications for deadlines & attendance warnings
+- Advanced gamification (badges, streaks, leaderboards)
+- Accessibility improvements
+- Offline lecture content access
+
+---
+
+## 🏺 Why “Athena”?
+
+Athena, the Greek goddess of **wisdom and knowledge**, symbolizes intelligence, learning, and strategic thinking — perfectly reflecting the project’s academic mission.
+
+---
+
+## 📄 Disclaimer
+
+This project is a **student-led concept** and is **not affiliated with or endorsed by the University of Leeds**.
+
+---
+
